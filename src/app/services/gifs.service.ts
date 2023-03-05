@@ -8,11 +8,11 @@ import { GifSimpleModel } from '../models/gif-simple.model';
 export class GifService {
   constructor(private httpClient: HttpClient) {}
 
-  getGifs(search: string): Observable<GifSimpleModel[]> {
+  getGifs(search: string, size: number): Observable<GifSimpleModel[]> {
     const req = this.httpClient
       .request(
         'GET',
-        `https://api.giphy.com/v1/gifs/search?api_key=lXATXIC1oWqLbcNbzBXCH2W8215dEiuD&q=${search}%C3%A7&limit=7`
+        `https://api.giphy.com/v1/gifs/search?api_key=lXATXIC1oWqLbcNbzBXCH2W8215dEiuD&q=${search}%C3%A7&limit=${size}`
       )
       .pipe(
         map((res) => {

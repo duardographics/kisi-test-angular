@@ -1,0 +1,35 @@
+@import "../../../scss/var";
+
+.card-body {
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+  display: block;
+  height: 100%;
+  padding: 1rem;
+  color: $white;
+  transition: ease-out 0.3s;
+  &:hover {
+    background: $kisi-blue;
+    cursor: pointer;
+    .description {
+      display: block;
+    }
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  .description {
+    display: none;
+    transition: ease-in 0.4s;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .action {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}

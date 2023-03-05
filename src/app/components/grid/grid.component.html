@@ -1,20 +1,21 @@
 <section>
   <div class="grd-1" #grid>
-    <div class="search">
-      <h2>Title</h2>
+    <div class="title">
+      <h2>Cat gifs from Giphy</h2>
     </div>
     <div
       *ngFor="let item of gifItems; let i = index"
       [style.backgroundImage]="'url(' + item.url + ')'"
+      [class]="getClass(i)"
     >
       <app-card
         [title]="item.title"
         [description]="item.description"
       ></app-card>
     </div>
-    <div class=""></div>
-    <div class="">
-      <button>Search</button>
+    <div class="blank"></div>
+    <div class="grd-btn">
+      <button (click)="moreGifs(6)">Search</button>
     </div>
   </div>
 </section>
